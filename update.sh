@@ -20,5 +20,5 @@ for ip_range in `cat ./china_ip_list/china_ip_list.txt`; do
   sudo ipset --add $1 $ip_range
 done
 
-sudo sh -c 'ipset save > /etc/resolv.conf'
+sudo sh -c 'ipset save > /etc/ipset.conf'
 sudo systemctl restart iptables.service
